@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.5.1",
+    "stream-chat": "^8.13.0",
+    "stream-chat-react": "^10.14.0",
+    "universal-cookie": "^6.1.1"
+  }
+}
