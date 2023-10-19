@@ -3,24 +3,24 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" style="height: 100vh;">
     <header class="site-header" style="display: inline-flex; align-items: center; font-size: 6px;">
-      <a href="https://bobagi.net"><img src="/purpleOctopusTransp.png" class="logo" style="height: 6em;" alt="Purpotopus logo" /></a>
-      <h1>Purpotopus</h1>
+      <a href="https://bobagi.net"><img src="/purpleOctopus.png" class="logo" style="height: 6em;" alt="Purpotopus logo" /></a>
+      <h1 style="color: #eb03cf;">Crypto</h1><h1>Pus</h1>
     </header>
     <div class="site-content">
       <a href="https://bobagi.net">
-        <img src="/purpleOctopus.png" class="logo" alt="Purpotopus logo" />
+        <img src="/purpleOctopus.png" class="logo" alt="CryptoPus logo" />
       </a>
       <!-- <a href="https://vuejs.org/" target="_blank">
         <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a> 1-->
-      <HelloWorld msg="Purpotopus" />
+      <HelloWorld msg="Crypto" msg2="Pus"/>
     </div>
     
     <footer class="site-footer">
       <div class="footer-content">
-        <p>&copy; {{ new Date().getFullYear() }} Bobagi</p>
+        <p>&copy; {{ new Date().getFullYear() }} Bobagi. All rights reserved.</p>
       </div>
     </footer>
   </div>
@@ -30,6 +30,7 @@ import HelloWorld from './components/HelloWorld.vue'
 .site-content{
   background: linear-gradient(#272626, #eb03cf);
   padding-bottom: 1px;
+  height: 100%;
 }
 .site-header, .site-footer {
   width: 100%; /* Make header and footer take full width */
@@ -55,7 +56,7 @@ margin: 10px 0px;
   display: flex;
   align-items: center; /* Vertically center content */
   justify-content: space-between; /* Push content to the sides */
-  background: linear-gradient(#eb03cf, #333);
+  background: linear-gradient(#4e0145, #333);
 }
 
 .footer-content {
@@ -66,7 +67,7 @@ margin: 10px 0px;
 }
 
 .logo {
-  height: 6em;
+  height: 9em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
