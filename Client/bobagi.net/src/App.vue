@@ -5,17 +5,17 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div class="container" style="height: 100vh;">
     <header class="site-header" style="display: inline-flex; align-items: center; font-size: 6px;">
-      <a href="https://bobagi.net"><img src="/purpleOctopus.png" class="logo" style="height: 6em;" alt="Purpotopus logo" /></a>
-      <h1 style="color: #eb03cf;">Crypto</h1><h1>Pus</h1>
+      <a href="https://bobagi.net"><img src="/BeeposTransp2.png" class="logo" style="height: 6em;" alt="BeePos logo" /></a>
+      <h1 style="color: #FFD421;">Bee</h1><h1>Pus</h1>
     </header>
     <div class="site-content">
-      <a href="https://bobagi.net">
-        <img src="/purpleOctopus.png" class="logo" alt="CryptoPus logo" />
+      <div style="background: linear-gradient(#000000 90%, #FFD421);">
+        <a href="https://bobagi.net">
+        <img src="/BeeposTransp1.png" class="logo" alt="CryptoPus logo" />
       </a>
-      <!-- <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a> 1-->
-      <HelloWorld msg="Crypto" msg2="Pus"/>
+      </div>
+      
+      <HelloWorld msg="Bee" msg2="Pus"/>
     </div>
     
     <footer class="site-footer">
@@ -28,22 +28,22 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 .site-content{
-  background: linear-gradient(#272626, #eb03cf);
+  background: #FFD421;
   padding-bottom: 1px;
   height: 100%;
 }
 .site-header, .site-footer {
   width: 100%; /* Make header and footer take full width */
-  /* position: fixed; */
+  position: fixed;
   color: white; /* Text color, can be any color you prefer */
   text-align: center; /* Center the title */
   padding: 10px 0; /* Some padding */
   z-index: 100; /* Ensure it stays on top of other content */
+  background: #000000;
 }
 
 .site-header {
   top: 0; /* Stick to the top */
-  background: linear-gradient(#333, #272626);
   position: sticky;
 }
 
@@ -56,7 +56,6 @@ margin: 10px 0px;
   display: flex;
   align-items: center; /* Vertically center content */
   justify-content: space-between; /* Push content to the sides */
-  background: linear-gradient(#4e0145, #333);
 }
 
 .footer-content {
@@ -71,13 +70,10 @@ margin: 10px 0px;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  border-radius: 50%;  /* This makes the image round */
+  border-radius: 10%;  /* This makes the image round */
     object-fit: cover;   /* This ensures the image covers the frame without distortion */
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 3em #ffffff);
 }
-/* .logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-} */
 </style>
