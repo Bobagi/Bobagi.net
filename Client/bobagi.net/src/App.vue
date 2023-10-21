@@ -9,7 +9,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <h1 style="color: #FFD421;">Bee</h1><h1>Pus</h1>
     </header>
     <div class="site-content">
-      <div style="background: linear-gradient(#000000 90%, #FFD421);">
+      <div style="background:#000000;">
         <a href="https://bobagi.net">
         <img src="/BeeposTransp1.png" class="logo" alt="CryptoPus logo" />
       </a>
@@ -21,6 +21,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <footer class="site-footer">
       <div class="footer-content">
         <p>&copy; {{ new Date().getFullYear() }} Bobagi. All rights reserved.</p>
+        <a href="https://www.linkedin.com/in/gustavoaperin/" target="_blank"><img src="/bobagiCursive.png" style="margin-right: 20px;height: 2.4em;padding: 0;" alt="BeePos logo" /></a>
       </div>
     </footer>
   </div>
@@ -28,23 +29,25 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 .site-content{
-  background: #FFD421;
+  background: radial-gradient(#FFD421, #836e18);
   padding-bottom: 1px;
   height: 100%;
 }
 .site-header, .site-footer {
   width: 100%; /* Make header and footer take full width */
-  position: fixed;
   color: white; /* Text color, can be any color you prefer */
   text-align: center; /* Center the title */
   padding: 10px 0; /* Some padding */
   z-index: 100; /* Ensure it stays on top of other content */
-  background: #000000;
+  background: rgba(0, 0, 0, 0.68);
 }
 
 .site-header {
   top: 0; /* Stick to the top */
   position: sticky;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .site-header > h1{
@@ -61,7 +64,7 @@ margin: 10px 0px;
 .footer-content {
   display: flex;
   width: 100%; /* Full width */
-  justify-content: flex-start; /* Align to start */
+  justify-content: space-between;
   padding-left: 10px; /* Some padding */
 }
 

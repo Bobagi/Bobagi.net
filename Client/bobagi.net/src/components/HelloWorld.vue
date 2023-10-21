@@ -10,7 +10,8 @@ const count = ref(0)
 </script>
 
 <template>
-  <div>
+  <div class="containerContent">
+  <div class="panelContent">
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
@@ -42,4 +43,27 @@ const count = ref(0)
 
   <img src="/UnderDevopment.png" class="logo" style="height: 20em;border-radius: 25%;" alt="Under development icon" />
 </div>
+</div>
 </template>
+
+<style scoped>
+.containerContent{
+  justify-content: center;
+  display: flex;
+}
+.panelContent{
+  /* From https://css.glass */
+  width: 50%;
+background: rgba(255, 255, 255, 0.48);
+/* background: rgba(0, 0, 0, 0.48); */
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(16.6px);
+-webkit-backdrop-filter: blur(16.6px);
+border: 1px solid rgba(255, 255, 255, 1);
+/* border: 1px solid rgba(0, 0, 0, 1); */
+
+padding: 0;
+margin: 20px;
+}
+</style>
