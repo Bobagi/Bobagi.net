@@ -3,7 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div class="container" style="height: 100vh;">
+  <div class="container">
     <header class="site-header" style="display: inline-flex; align-items: center; font-size: 6px;">
       <a href="https://bobagi.net"><img src="/BeeposTransp2.png" class="logo" style="height: 6em;" alt="BeePos logo" /></a>
       <h1 style="color: #FFD421;">Bee</h1><h1>Pus</h1>
@@ -11,10 +11,9 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="site-content">
       <div style="background:#000000;">
         <a href="https://bobagi.net">
-        <img src="/BeeposTransp1.png" class="logo" alt="CryptoPus logo" />
-      </a>
+          <img src="/BeeposTransp1.png" class="logo" alt="CryptoPus logo" />
+        </a>
       </div>
-      
       <HelloWorld msg="Bee" msg2="Pus"/>
     </div>
     
@@ -29,6 +28,8 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 .site-content{
+  display: flex;
+  flex-direction: column;
   background: radial-gradient(#FFD421, #836e18);
   padding-bottom: 1px;
   height: 100%;
