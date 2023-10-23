@@ -20,7 +20,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <footer class="site-footer">
       <div class="footer-content">
         <p>&copy; {{ new Date().getFullYear() }} Bobagi. All rights reserved.</p>
-        <a href="https://www.linkedin.com/in/gustavoaperin/" target="_blank"><img src="/bobagiCursive.png" style="margin-right: 20px;height: 2.4em;padding: 0;" alt="BeePos logo" /></a>
+        <a href="https://www.linkedin.com/in/gustavoaperin/" target="_blank"><img src="/bobagiCursiveTransp.png" class="logo" style="margin-right: 20px;height: 2.4em;padding: 0;" alt="BeePos logo" /></a>
       </div>
     </footer>
   </div>
@@ -30,7 +30,7 @@ import HelloWorld from './components/HelloWorld.vue'
 .site-content{
   display: flex;
   flex-direction: column;
-  background: radial-gradient(#FFD421, #836e18);
+  background: radial-gradient(#FFD421, #a98d1a);
   padding-bottom: 1px;
   height: 100%;
 }
@@ -78,6 +78,6 @@ margin: 10px 0px;
     object-fit: cover;   /* This ensures the image covers the frame without distortion */
 }
 .logo:hover {
-  filter: drop-shadow(0 0 3em #ffffff);
+  filter: drop-shadow(0 0 1em yellow);
 }
 </style>
