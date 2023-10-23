@@ -1,4 +1,4 @@
-# Bobagi.net
+# Bobagi.net - Beepus (Temp fictional name)
 
 ## Description
 Bobagi.net is a personal project website designed for testing and experimentation purposes. Built with cutting-edge technologies like Vite, Vue.js, and Node.js, it serves as a sandbox for innovative ideas and web development practices.
@@ -20,7 +20,7 @@ To install Bobagi.net, follow these steps:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/Bobagi.net.git
+git clone https://github.com/Bobagi/Bobagi.net
 ```
 
 2. Navigate to the project directory and install dependencies in both Client and Server.
