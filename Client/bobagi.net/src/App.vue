@@ -70,6 +70,9 @@ margin: 10px 0px;
   justify-content: space-between;
   padding-left: 10px; /* Some padding */
 }
+.footer-content > p{
+  cursor: default;
+}
 
 .logo {
   height: 9em;
