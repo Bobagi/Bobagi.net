@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Login from './components/Login.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <a href="https://bobagi.net">
           <img src="/BeeposTransp1.png" class="logo" alt="CryptoPus logo" />
         </a>
+        <Login/>
       </div>
       <HelloWorld msg="Bee" msg2="Pus"/>
     </div>

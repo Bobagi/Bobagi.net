@@ -54,16 +54,18 @@ const count = ref(0)
 .panelContent{
   /* From https://css.glass */
   width: 50%;
-background: rgba(255, 255, 255, 0.48);
-/* background: rgba(0, 0, 0, 0.48); */
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(16.6px);
--webkit-backdrop-filter: blur(16.6px);
-border: 1px solid rgba(255, 255, 255, 1);
-/* border: 1px solid rgba(0, 0, 0, 1); */
+  /* rgba(255, 255, 255, 0.48) */
+  background: radial-gradient(rgba(255, 255, 255, 0.48), rgba(221, 213, 153, 0.48));
+  /* background: rgba(0, 0, 0, 0.48); */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.6px);
+  -webkit-backdrop-filter: blur(16.6px);
+  /* rgba(255, 255, 255, 1) */
+  border: 1px solid rgba(221, 213, 153, 1);
+  /* border: 1px solid rgba(0, 0, 0, 1); */
 
-padding: 0;
-margin: 20px;
+  padding: 0;
+  margin: 20px;
 }
 </style>
