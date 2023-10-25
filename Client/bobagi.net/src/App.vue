@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Content from './components/Content.vue'
 import Login from './components/Login.vue'
 </script>
 
@@ -16,7 +16,7 @@ import Login from './components/Login.vue'
         </a>
         <Login/>
       </div>
-      <HelloWorld msg="Bee" msg2="Pus"/>
+      <Content msg="Bee" msg2="Pus"/>
     </div>
     
     <footer class="site-footer">
