@@ -1,4 +1,4 @@
-# Bobagi.net - Beepus (Temp fictional name)
+# Bobagi.net
 
 ## Description
 Bobagi.net is a personal project website designed for testing and experimentation purposes. Built with cutting-edge technologies like Vite, Vue.js, and Node.js, it serves as a sandbox for innovative ideas and web development practices.
