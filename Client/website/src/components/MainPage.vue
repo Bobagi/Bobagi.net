@@ -111,16 +111,14 @@
                 <v-col cols="auto">
                   <v-btn
                     color="primary"
-                    href="https://vuetifyjs.com/introduction/why-vuetify/#feature-guides"
                     min-width="228"
-                    rel="noopener noreferrer"
                     size="x-large"
-                    target="_blank"
                     variant="flat"
+                    :to="{ name: 'Snowflake' }"
                   >
-                    <v-icon icon="mdi-speedometer" size="large" start />
+                    <v-icon icon="mdi-snowman" size="large" start />
 
-                    Get Started
+                    Snowflake
                   </v-btn>
                 </v-col>
 
@@ -185,11 +183,6 @@
 
 <script lang="ts" setup>
 import { ref, defineProps } from "vue";
-
-defineProps({
-  msg: String,
-  msg2: String,
-});
 
 const form = ref(false);
 const email = ref(null);
