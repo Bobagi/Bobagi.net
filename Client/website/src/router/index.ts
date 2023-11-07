@@ -16,12 +16,12 @@ const routes = [
           import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
       },
       {
-        path: "/",
+        path: "/Vuetify",
         name: "VuetifyDocs",
         component: () => import("@/views/VuetifyDocs.vue"),
       },
       {
-        path: "/",
+        path: "/Snowflake",
         name: "Snowflake",
         component: () => import("@/views/vwSnowflake.vue"),
       },
