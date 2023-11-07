@@ -1,15 +1,18 @@
 <template>
   <v-app>
-    <default-bar />
-
-    <default-view />
-
+    <AppBar />
+    <v-main>
+      <!-- v-main will ensure that content is below the app bar -->
+      <Header />
+      <View />
+    </v-main>
     <Footer />
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import DefaultBar from "./AppBar.vue";
-import DefaultView from "./View.vue";
+import AppBar from "./AppBar.vue";
+import Header from "./Header.vue";
+import View from "./View.vue";
 import Footer from "./Footer.vue";
 </script>
