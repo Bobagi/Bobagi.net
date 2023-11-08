@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height">
+  <div class="fill-height">
     <v-responsive class="align-center text-center fill-height">
       <v-img height="300" src="@/assets/logo.svg" />
 
@@ -69,7 +69,7 @@
         </v-col>
       </v-row>
     </v-responsive>
-  </v-container>
+  </div>
 </template>
 
 <script lang="ts" setup>

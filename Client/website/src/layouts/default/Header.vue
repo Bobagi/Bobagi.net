@@ -72,6 +72,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+import axios from "axios";
 
 const form = ref(false);
 const email = ref(null);
@@ -80,10 +81,27 @@ const loading = ref(false);
 
 const required = (v: string | null | undefined) => !!v || "Field is required";
 
-const onSubmit = () => {
+const onSubmit = async () => {
   if (!form.value) return;
 
   loading.value = true;
-  setTimeout(() => (loading.value = false), 2000);
+
+  try {
+    // Here we send a POST request to our backend
+    // const response = await axios.post("http://localhost:3000/register", {
+    //   email: email.value,
+    //   password: password.value,
+    // });
+
+    // Handle success, such as showing a message or redirecting
+    alert("Registration successful");
+    // console.log(response.data);
+  } catch (error) {
+    // Handle error, such as showing an error message
+    alert("Registration failed");
+    console.error(error);
+  }
+
+  loading.value = false;
 };
 </script>
