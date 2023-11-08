@@ -88,14 +88,14 @@ const onSubmit = async () => {
 
   try {
     // Here we send a POST request to our backend
-    // const response = await axios.post("http://localhost:3000/register", {
-    //   email: email.value,
-    //   password: password.value,
-    // });
+    const response = await axios.post("http://localhost:3000/register", {
+      email: email.value,
+      password: password.value,
+    });
 
     // Handle success, such as showing a message or redirecting
     alert("Registration successful");
-    // console.log(response.data);
+    console.log(response.data);
   } catch (error) {
     // Handle error, such as showing an error message
     alert("Registration failed");
