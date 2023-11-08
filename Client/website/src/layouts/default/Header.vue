@@ -9,39 +9,42 @@
   </a>
 
   <v-form
-    v-model="form"
-    @submit.prevent="onSubmit"
+    @submit.prevent="onSubmitLogin"
     class="d-flex"
     style="justify-content: right; margin: 8px"
   >
     <div class="d-flex w-50">
       <v-row>
+        <!-- Email Field -->
         <v-col>
           <v-text-field
-            v-model="email"
+            v-model="user.email"
             :readonly="loading"
-            :rules="[required]"
+            :rules="[rules.required]"
             clearable
             label="Email"
             color="primary"
           ></v-text-field>
         </v-col>
 
+        <!-- Password Field -->
         <v-col>
           <v-text-field
-            v-model="password"
+            v-model="user.password"
             :readonly="loading"
-            :rules="[required]"
+            :rules="[rules.required]"
             clearable
             label="Password"
             placeholder="Enter your password"
             color="primary"
+            type="password"
           ></v-text-field>
         </v-col>
 
+        <!-- Sign In Button -->
         <v-col style="flex-grow: 0">
           <v-btn
-            :disabled="!form"
+            :disabled="loading"
             :loading="loading"
             color="primary"
             size="large"
@@ -51,13 +54,16 @@
             Sign In
           </v-btn>
         </v-col>
+
+        <!-- Sign Up Button -->
+        <!-- The event here should trigger a different method for registration -->
         <v-col style="flex-grow: 0">
           <v-btn
-            :disabled="!form"
+            :disabled="loading"
             :loading="loading"
             color="primary"
             size="large"
-            type="submit"
+            @click="onSubmitRegister"
             variant="outlined"
           >
             Sign Up
@@ -68,40 +74,75 @@
   </v-form>
 </template>
 
-<style scoped></style>
-
 <script lang="ts" setup>
 import { ref } from "vue";
-import axios from "axios";
-
-const form = ref(false);
-const email = ref(null);
-const password = ref(null);
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+// User data
+const user = ref({
+  email: "",
+  password: "",
+});
 const loading = ref(false);
 
-const required = (v: string | null | undefined) => !!v || "Field is required";
+// Validation rules
+const rules = {
+  required: (value: string) => !!value || "Field is required",
+};
 
-const onSubmit = async () => {
-  if (!form.value) return;
-
+// Methods for form submission
+const onSubmitLogin = async () => {
   loading.value = true;
-
   try {
-    // Here we send a POST request to our backend
-    const response = await axios.post("http://localhost:3000/register", {
-      email: email.value,
-      password: password.value,
+    // Send login request to your server
+    const response = await fetch(`${apiBaseUrl}/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user.value),
     });
+    const data = await response.json();
 
-    // Handle success, such as showing a message or redirecting
-    alert("Registration successful");
-    console.log(response.data);
+    // Handle response from the server
+    if (data.success) {
+      // Redirect or store the session token
+      console.log("Login successful", data);
+    } else {
+      // Handle errors, show messages to the user
+      console.error("Login failed", data.message);
+    }
   } catch (error) {
-    // Handle error, such as showing an error message
-    alert("Registration failed");
-    console.error(error);
+    console.error("Login error", error);
+  } finally {
+    loading.value = false;
   }
+};
 
-  loading.value = false;
+const onSubmitRegister = async () => {
+  loading.value = true;
+  try {
+    // Send registration request to your server
+    const response = await fetch(`${apiBaseUrl}/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user.value),
+    });
+    const data = await response.json();
+
+    // Handle response from the server
+    if (data.success) {
+      // Redirect or show success message
+      console.log("Registration successful", data);
+    } else {
+      // Handle errors, show messages to the user
+      console.error("Registration failed", data.message);
+    }
+  } catch (error) {
+    console.error("Registration error", error);
+  } finally {
+    loading.value = false;
+  }
 };
 </script>
