@@ -92,6 +92,7 @@ const rules = {
 // Methods for form submission
 const onSubmitLogin = async () => {
   loading.value = true;
+  console.log("Trying to logging: " + `${apiBaseUrl}/login`);
   try {
     // Send login request to your server
     const response = await fetch(`${apiBaseUrl}/login`, {
@@ -120,6 +121,7 @@ const onSubmitLogin = async () => {
 
 const onSubmitRegister = async () => {
   loading.value = true;
+  console.log("Trying to register: " + `${apiBaseUrl}/login`);
   try {
     // Send registration request to your server
     const response = await fetch(`${apiBaseUrl}/register`, {
