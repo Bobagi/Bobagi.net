@@ -77,6 +77,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+console.log(apiBaseUrl);
 // User data
 const user = ref({
   email: "",
@@ -93,6 +94,7 @@ const rules = {
 const onSubmitLogin = async () => {
   loading.value = true;
   console.log("Trying to logging: " + `${apiBaseUrl}/login`);
+
   try {
     // Send login request to your server
     const response = await fetch(`${apiBaseUrl}/login`, {
@@ -121,7 +123,8 @@ const onSubmitLogin = async () => {
 
 const onSubmitRegister = async () => {
   loading.value = true;
-  console.log("Trying to register: " + `${apiBaseUrl}/login`);
+  console.log("Trying to register: " + `${apiBaseUrl}/register`);
+
   try {
     // Send registration request to your server
     const response = await fetch(`${apiBaseUrl}/register`, {
