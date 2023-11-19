@@ -25,6 +25,16 @@ const routes = [
         name: "Snowflake",
         component: () => import("@/views/vwSnowflake.vue"),
       },
+      {
+        path: "/Herowars",
+        name: "Herowars",
+        component: () => import("@/views/vwHeroWars.vue"),
+      },
+      {
+        path: "/Zomboid",
+        name: "Zomboid",
+        component: () => import("@/views/vwZomboid.vue"),
+      },
     ],
   },
 ];

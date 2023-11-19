@@ -80,6 +80,32 @@
                   Docs
                 </v-btn>
               </v-col>
+
+              <v-col cols="auto">
+                <v-btn
+                  color="primary"
+                  min-width="228"
+                  size="x-large"
+                  variant="flat"
+                  :to="{ name: 'Zomboid' }"
+                >
+                  <v-icon icon="mdi-nature-people" size="large" start></v-icon>
+                  Zomboid
+                </v-btn>
+              </v-col>
+
+              <v-col cols="auto">
+                <v-btn
+                  color="primary"
+                  min-width="228"
+                  size="x-large"
+                  variant="flat"
+                  :to="{ name: 'Herowars' }"
+                >
+                  <v-icon icon="mdi-sword" size="large" start></v-icon>
+                  Hero Wars
+                </v-btn>
+              </v-col>
             </v-row>
           </div>
         </div>
