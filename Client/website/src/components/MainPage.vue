@@ -55,15 +55,14 @@
 
               <v-col cols="auto">
                 <v-btn
-                  href="https://community.vuetifyjs.com/"
+                  @click="downloadFile"
                   min-width="164"
                   rel="noopener noreferrer"
                   target="_blank"
                   variant="text"
                 >
-                  <v-icon icon="mdi-account-group" size="large" start />
-
-                  Community
+                  <v-icon icon="mdi-download" size="large" start />
+                  Download
                 </v-btn>
               </v-col>
             </v-row>
@@ -117,6 +116,26 @@
 <style scoped></style>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, getCurrentInstance } from "vue";
+
 const count = ref(0);
+
+const downloadFile = async () => {
+  const fileName = "dist.7z";
+
+  try {
+    const response = await fetch(`/download/${fileName}`);
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error("Error downloading file:", error);
+  }
+};
 </script>
