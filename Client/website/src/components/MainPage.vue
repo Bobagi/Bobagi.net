@@ -121,7 +121,8 @@ import { ref, getCurrentInstance } from "vue";
 const count = ref(0);
 
 const downloadFile = async () => {
-  const fileName = "dist.7z";
+  // const fileName = "dist.7z";
+  const fileName = "teste.txt";
 
   try {
     const response = await fetch(`/download/${fileName}`);
