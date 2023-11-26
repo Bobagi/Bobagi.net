@@ -120,23 +120,15 @@ import { ref, getCurrentInstance } from "vue";
 
 const count = ref(0);
 
-const downloadFile = async () => {
-  // const fileName = "dist.7z";
-  const fileName = "teste.txt";
+const downloadFile = () => {
+  const fileName = "dist.7z";
+  const downloadUrl = `:4000/download/${fileName}`;
 
   try {
-    const response = await fetch(`/download/${fileName}`);
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open the download URL in a new window or tab
+    window.open(downloadUrl, "_blank");
   } catch (error) {
-    console.error("Error downloading file:", error);
+    console.error("Error opening download URL:", error);
   }
 };
 </script>
