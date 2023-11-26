@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const https = require("https");
+const fs = require("fs");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -23,6 +25,25 @@ app.get("/download/:fileName", (req, res) => {
   });
 });
 
-app.listen(port, () => {
+// HTTPS Configuration
+// Assuming your Node.js server code is in /var/www/html/Bobagi.net/Server/src
+const serverOptions = {
+  key: fs.readFileSync(
+    path.resolve(
+      __dirname,
+      "/../../../../../etc/ssl/private/ssl-cert-snakeoil.key"
+    )
+  ),
+  cert: fs.readFileSync(
+    path.resolve(
+      __dirname,
+      "/../../../../../etc/ssl/certs/ssl-cert-snakeoil.pem"
+    )
+  ),
+};
+
+const httpsServer = https.createServer(serverOptions, app);
+
+httpsServer.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
