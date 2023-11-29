@@ -121,14 +121,11 @@ import { ref } from "vue";
 const count = ref(0);
 
 const downloadFile = () => {
-  // console.log("Environment variables:", import.meta.env);
-  // console.log("VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
-
   const fileName = "dist.7z";
   const downloadUrl =
     import.meta.env.VITE_API_BASE_URL +
     ":" +
-    import.meta.env.PORT +
+    import.meta.env.VITE_PORT +
     "/download/" +
     fileName;
 
