@@ -122,11 +122,11 @@ const count = ref(0);
 
 const downloadFile = () => {
   const fileName = "dist.7z";
+
+  // Update the download URL to include the API path
   const downloadUrl =
     import.meta.env.VITE_API_BASE_URL +
-    ":" +
-    import.meta.env.VITE_PORT +
-    "/download/" +
+    "/api/download/" + // Updated path to include "/api"
     fileName;
 
   try {
