@@ -121,8 +121,12 @@ import { ref } from "vue";
 const count = ref(0);
 
 const downloadFile = () => {
+  console.log("Environment variables:", import.meta.env);
+  console.log("VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
+
   const fileName = "dist.7z";
-  const downloadUrl = process.env.VITE_API_BASE_URL + "/download/" + fileName;
+  const downloadUrl =
+    import.meta.env.VITE_API_BASE_URL + "/download/" + fileName;
 
   try {
     // Open the download URL in a new window or tab
