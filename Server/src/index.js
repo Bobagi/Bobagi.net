@@ -13,6 +13,10 @@ app.use(cors());
 // Serve files from the 'public' folder
 app.use(express.static(path.join(__dirname, "../public")));
 
+app.get("/", (req, res) => {
+  res.send("App is working fine");
+});
+
 app.get("/download/:fileName", (req, res) => {
   const fileName = req.params.fileName;
   const filePath = path.join(__dirname, "../public", fileName);
@@ -25,25 +29,31 @@ app.get("/download/:fileName", (req, res) => {
   });
 });
 
-// HTTPS Configuration
-// Assuming your Node.js server code is in /var/www/html/Bobagi.net/Server/src
-const serverOptions = {
-  key: fs.readFileSync(
-    path.resolve(
-      __dirname,
-      "/../../../../../etc/ssl/private/ssl-cert-snakeoil.key"
-    )
-  ),
-  cert: fs.readFileSync(
-    path.resolve(
-      __dirname,
-      "/../../../../../etc/ssl/certs/ssl-cert-snakeoil.pem"
-    )
-  ),
-};
+// HTTPS Configuration for Production
+if (process.env.NODE_ENV === "production") {
+  const serverOptions = {
+    key: fs.readFileSync(
+      path.resolve(
+        __dirname,
+        "/../../../../../etc/ssl/private/ssl-cert-snakeoil.key"
+      )
+    ),
+    cert: fs.readFileSync(
+      path.resolve(
+        __dirname,
+        "/../../../../../etc/ssl/certs/ssl-cert-snakeoil.pem"
+      )
+    ),
+  };
 
-const httpsServer = https.createServer(serverOptions, app);
+  const httpsServer = https.createServer(serverOptions, app);
 
-httpsServer.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+  httpsServer.listen(port, () => {
+    console.log(`Server is running on port ${port} in production mode`);
+  });
+} else {
+  // HTTP Configuration for Development
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port} in development mode`);
+  });
+}

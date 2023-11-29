@@ -116,13 +116,13 @@
 <style scoped></style>
 
 <script lang="ts" setup>
-import { ref, getCurrentInstance } from "vue";
+import { ref } from "vue";
 
 const count = ref(0);
 
 const downloadFile = () => {
   const fileName = "dist.7z";
-  const downloadUrl = `:4000/download/${fileName}`;
+  const downloadUrl = "http://bobagi.net:4000/download/" + fileName;
 
   try {
     // Open the download URL in a new window or tab
