@@ -3,6 +3,10 @@ const cors = require("cors");
 const path = require("path");
 const https = require("https");
 const fs = require("fs");
+const dotenv = require("dotenv");
+
+// Specify the path to your .env file
+dotenv.config({ path: path.join(__dirname, "../.env") });
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -29,6 +33,7 @@ app.get("/download/:fileName", (req, res) => {
   });
 });
 
+console.log(`running in ${process.env.NODE_ENV} mode`);
 // HTTPS Configuration for Production
 if (process.env.NODE_ENV === "production") {
   const serverOptions = {
