@@ -20,11 +20,18 @@ app.use(cors());
 // Serve files from the 'public' folder
 app.use(express.static(path.join(__dirname, "../public")));
 
+// Handle requests at the root path ("/")
 app.get("/", (req, res) => {
   res.send("App is working fine");
 });
 
-app.get("/download/:fileName", (req, res) => {
+// Handle requests at the "/api" path
+app.get("/api", (req, res) => {
+  res.send("API is working fine");
+});
+
+// Handle requests at the "/api/download/:fileName" path
+app.get("/api/download/:fileName", (req, res) => {
   const fileName = req.params.fileName;
   const filePath = path.join(__dirname, "../public", fileName);
 
