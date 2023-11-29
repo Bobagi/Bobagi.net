@@ -77,7 +77,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
-console.log(apiBaseUrl);
+
 // User data
 const user = ref({
   email: "",
