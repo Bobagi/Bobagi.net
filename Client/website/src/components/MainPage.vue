@@ -122,7 +122,7 @@ const count = ref(0);
 
 const downloadFile = () => {
   const fileName = "dist.7z";
-  const downloadUrl = "http://bobagi.net:4000/download/" + fileName;
+  const downloadUrl = process.env.VITE_API_BASE_URL + "/download/" + fileName;
 
   try {
     // Open the download URL in a new window or tab
