@@ -28,11 +28,26 @@ app.get("/download/:fileName", (req, res) => {
   const fileName = req.params.fileName;
   const filePath = path.join(__dirname, "../public", fileName);
 
-  res.download(filePath, (err) => {
-    if (err) {
-      console.error("Error downloading file:", err);
-      res.status(500).send("Internal Server Error");
-    }
+  // Check if the file exists
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send("File not found");
+  }
+
+  // Set content disposition header for download
+  res.setHeader("Content-Disposition", `attachment; filename=${fileName}`);
+
+  // Stream the file to the response
+  const fileStream = fs.createReadStream(filePath);
+  fileStream.on("error", (err) => {
+    console.error("Error reading file:", err);
+    res.status(500).send("Internal Server Error");
+  });
+
+  fileStream.pipe(res);
+
+  // Close the response when the download is complete
+  fileStream.on("end", () => {
+    res.end();
   });
 });
 
