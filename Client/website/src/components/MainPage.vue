@@ -122,20 +122,20 @@ const count = ref(0);
 
 const downloadFile = () => {
   const fileName = "dist.7z";
-
+  alert("Temporarily disabled");
   // Update the download URL to include the API path
-  const downloadUrl =
-    import.meta.env.VITE_API_BASE_URL +
-    ":" +
-    import.meta.env.VITE_PORT +
-    "/api/download/" + // Updated path to include "/api"
-    fileName;
+  // const downloadUrl =
+  //   import.meta.env.VITE_API_BASE_URL +
+  //   ":" +
+  //   import.meta.env.VITE_PORT +
+  //   "/api/download/" + // Updated path to include "/api"
+  //   fileName;
 
-  try {
-    // Open the download URL in a new window or tab
-    window.open(downloadUrl, "_blank");
-  } catch (error) {
-    console.error("Error opening download URL:", error);
-  }
+  // try {
+  //   // Open the download URL in a new window or tab
+  //   window.open(downloadUrl, "_blank");
+  // } catch (error) {
+  //   console.error("Error opening download URL:", error);
+  // }
 };
 </script>
