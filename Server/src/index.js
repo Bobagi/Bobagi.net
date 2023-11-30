@@ -4,6 +4,7 @@ const path = require("path");
 const https = require("https");
 const fs = require("fs");
 const dotenv = require("dotenv");
+const os = require("os");
 
 // Specify the path to your .env file
 dotenv.config({ path: path.join(__dirname, "../.env") });
@@ -59,6 +60,13 @@ app.get("/api/download/:fileName", (req, res) => {
 });
 
 console.log(`running in ${process.env.NODE_ENV} mode`);
+
+// Get the hostname
+const hostname = os.hostname();
+
+// Print the hostname with the port
+console.log(`Hostname: ${hostname}, Port: ${port}`);
+
 // HTTPS Configuration for Production
 if (process.env.NODE_ENV === "production") {
   const serverOptions = {
@@ -79,11 +87,11 @@ if (process.env.NODE_ENV === "production") {
   const httpsServer = https.createServer(serverOptions, app);
 
   httpsServer.listen(port, () => {
-    console.log(`Server is running on port ${port} in production mode`);
+    console.log(`Server is running on ${hostname}:${port} in production mode`);
   });
 } else {
   // HTTP Configuration for Development
   app.listen(port, () => {
-    console.log(`Server is running on port ${port} in development mode`);
+    console.log(`Server is running on ${hostname}:${port} in development mode`);
   });
 }
