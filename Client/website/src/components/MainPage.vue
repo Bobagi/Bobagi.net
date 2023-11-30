@@ -126,6 +126,8 @@ const downloadFile = () => {
   // Update the download URL to include the API path
   const downloadUrl =
     import.meta.env.VITE_API_BASE_URL +
+    ":" +
+    import.meta.env.VITE_PORT +
     "/api/download/" + // Updated path to include "/api"
     fileName;
 
