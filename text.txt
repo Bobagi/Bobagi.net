@@ -1,1 +1,12 @@
 screen -r node
+todas as chamadas a api começam com /api, que nao precisa ser definida no codigo
+toda configuraçaod e proxy for feit no le-ssl.conf
+
+website .env:
+VITE_API_BASE_URL=https://localhost:4000
+
+node server .env:
+DATABASE_CONNECTION="postgres://default:xxxxxxxxx-xxxxx-xxxxxx-xxxxxxxx.xx-xxxxxx-x.postgres.vercel-storage.com:xxxxxxx/verceldb"
+JWT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxx"
+PORT="4000"
+NODE_ENV="dev"

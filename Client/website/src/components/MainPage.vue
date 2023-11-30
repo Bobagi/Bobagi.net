@@ -55,14 +55,15 @@
 
               <v-col cols="auto">
                 <v-btn
-                  @click="downloadFile"
+                  href="https://community.vuetifyjs.com/"
                   min-width="164"
                   rel="noopener noreferrer"
                   target="_blank"
                   variant="text"
                 >
-                  <v-icon icon="mdi-download" size="large" start />
-                  Download
+                  <v-icon icon="mdi-account-group" size="large" start />
+
+                  Community
                 </v-btn>
               </v-col>
             </v-row>
@@ -119,23 +120,4 @@
 import { ref } from "vue";
 
 const count = ref(0);
-
-const downloadFile = () => {
-  const fileName = "dist.7z";
-  alert("Temporarily disabled");
-  // Update the download URL to include the API path
-  // const downloadUrl =
-  //   import.meta.env.VITE_API_BASE_URL +
-  //   ":" +
-  //   import.meta.env.VITE_PORT +
-  //   "/api/download/" + // Updated path to include "/api"
-  //   fileName;
-
-  // try {
-  //   // Open the download URL in a new window or tab
-  //   window.open(downloadUrl, "_blank");
-  // } catch (error) {
-  //   console.error("Error opening download URL:", error);
-  // }
-};
 </script>
