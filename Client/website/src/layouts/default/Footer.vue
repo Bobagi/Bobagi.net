@@ -17,6 +17,7 @@
 
     <div
       class="px-4 py-2 bg-black text-center w-100 d-flex justify-space-between"
+      style="align-items: center;"
     >
       <p>&copy; {{ new Date().getFullYear() }} Bobagi. All rights reserved.</p>
       <a href="https://www.linkedin.com/in/gustavoaperin/" target="_blank"

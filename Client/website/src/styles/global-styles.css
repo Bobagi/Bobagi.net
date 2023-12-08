@@ -37,12 +37,6 @@
 
 .panelContent {
   min-width: 50%;
-  /* background: radial-gradient(
-    rgba(255, 255, 255, 0.48),
-    rgba(221, 213, 153, 0.48)
-  ); */
-  /* border: 1px solid rgba(221, 213, 153, 1); */
-  background: rgba(0, 0, 0, 0.48);
   background: radial-gradient(rgba(0, 0, 0, 0.48), rgba(44, 41, 15, 0.48));
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
