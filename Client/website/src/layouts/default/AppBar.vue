@@ -1,24 +1,19 @@
 <template>
   <v-app-bar flat color="black" height="50">
     <v-col class="d-flex align-center">
-      <a href="https://bobagi.net">
+      <!-- Wrap the content with router-link -->
+      <router-link to="https://bobagi.net" class="d-flex align-center" style="text-decoration: none; color: inherit;">
         <img
           src="/BeeposTransp2.png"
           class="logo"
           style="height: 40px; width: 40px"
-          alt="BeePos logo"
+          alt="Bobagi logo"
         />
-      </a>
-      <v-app-bar-title class="ml-2">
-        <span style="color: #ffd421;">B</span>obagi
-      </v-app-bar-title>
+        <v-app-bar-title class="ml-2 logo">
+          <!-- Wrap the text with router-link -->
+          <span style="color: #ffd421; text-decoration: none;">B</span>obagi
+        </v-app-bar-title>
+      </router-link>
     </v-col>
   </v-app-bar>
 </template>
-
-<style scoped>
-</style>
-
-<script lang="ts" setup>
-//
-</script>
