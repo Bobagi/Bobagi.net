@@ -76,7 +76,7 @@
                   variant="flat"
                   :to="{ name: 'VuetifyDocs' }"
                 >
-                  <v-icon icon="mdi-speedometer" size="large" start></v-icon>
+                  <v-icon icon="mdi-book-multiple" size="large" start></v-icon>
                   Docs
                 </v-btn>
               </v-col>
