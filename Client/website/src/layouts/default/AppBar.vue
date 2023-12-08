@@ -2,7 +2,7 @@
   <v-app-bar flat color="black" height="50">
     <v-col class="d-flex align-center">
       <!-- Wrap the content with router-link -->
-      <router-link to="https://bobagi.net" class="d-flex align-center" style="text-decoration: none; color: inherit;">
+      <a href="https://bobagi.net" class="d-flex align-center" style="text-decoration: none; color: inherit;">
         <img
           src="/BeeposTransp2.png"
           class="logo"
@@ -10,10 +10,10 @@
           alt="Bobagi logo"
         />
         <v-app-bar-title class="ml-2 logo">
-          <!-- Wrap the text with router-link -->
+          <!-- Wrap the text with a regular anchor tag -->
           <span style="color: #ffd421; text-decoration: none;">B</span>obagi
         </v-app-bar-title>
-      </router-link>
+      </a>
     </v-col>
   </v-app-bar>
 </template>
