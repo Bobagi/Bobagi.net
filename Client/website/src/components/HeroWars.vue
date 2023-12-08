@@ -9,20 +9,40 @@
               height="100"
               class="logo orange-shadow"
               alt="Hero Wars logo"
-              style="margin-bottom: 10px"
           /></a>
+          
+          <div style="display: inline-flex;margin: 30px;">
+            <h1 style="color: whitesmoke;border-bottom: 1px groove #ccc;width: 260px;"><spam style="color: yellow;">Auto </spam>play Bot</h1>
+          </div>
 
-          <div>
+          <div style="display: flex; gap: 35px;">
             <img
               src="/Browser_Orion_Romantic_Skin.png"
               class="logo"
-              style="height: 20em; border-radius: 25%"
+              style="height: 20em;"
               alt="Under development icon"
             />
+            <label id="botDescription" style="word-wrap: break-word; max-width: 440px; text-align: left;">
+              This bot is an autoplay bot designed for the game Hero Wars Domination Era. It automates the repetitive tasks of climbing the tower and conquering the Titan's Dungeon, saving you from the mechanical work and allowing you to focus on the more enjoyable aspects of the game.
+              <br /><br />
+              To use that application, just download it and read the <span style="color: yellow;">README</span> file, follow the instructions and run the executable file.
+              <br /><br />
+              Only available for Windows OS.
+            </label>
           </div>
 
           <v-row class="d-flex align-center justify-center">
-            <v-col cols="auto">
+            <v-col class="d-flex align-center justify-center" style="gap:20px;" cols="auto">
+              <v-btn
+                min-width="164"
+                rel="noopener noreferrer"
+                variant="text"
+                href="https://bobagi.net"
+              >
+                <v-icon icon="mdi-home" size="large" start></v-icon>
+                Home
+              </v-btn>
+
               <v-btn
                 @click="downloadFile"
                 color="primary"
@@ -33,19 +53,16 @@
                 <v-icon icon="mdi-download" size="large" start></v-icon>
                 Download
               </v-btn>
-            </v-col>
-          </v-row>
 
-          <v-row class="d-flex align-center justify-center">
-            <v-col cols="auto">
               <v-btn
                 min-width="164"
                 rel="noopener noreferrer"
                 variant="text"
-                :to="{ name: 'Home' }"
+                href="https://github.com/Bobagi/Hero-Wars-Auto-Play-Bot"
+                target="_blank"
               >
-                <v-icon icon="mdi-home" size="large" start></v-icon>
-                Home
+                <v-icon icon="mdi-github" size="large" start></v-icon>
+                GitHub
               </v-btn>
             </v-col>
           </v-row>
