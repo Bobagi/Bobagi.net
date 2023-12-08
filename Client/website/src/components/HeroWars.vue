@@ -20,7 +20,7 @@
               src="/Browser_Orion_Romantic_Skin.png"
               class="logo"
               style="height: 20em;"
-              alt="Under development icon"
+              alt="Orion sprite"
             />
             <label id="botDescription" style="word-wrap: break-word; max-width: 440px; text-align: left;">
               This bot is an autoplay bot designed for the game Hero Wars Domination Era. It automates the repetitive tasks of climbing the tower and conquering the Titan's Dungeon, saving you from the mechanical work and allowing you to focus on the more enjoyable aspects of the game.

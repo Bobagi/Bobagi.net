@@ -31,7 +31,7 @@
               <br /><br />
 
               Server Details:
-              <ul class="server-link">
+              <ul class="link">
                 <li><a href="https://www.battlemetrics.com/servers/zomboid/24442372" target="_blank">BattleMetrics</a></li>
                 <li><a href="https://pzservers.com/s/olimpo" target="_blank">PZ Servers</a></li>
                 <li><a href="https://www.trackyserver.com/server/olimpo-2369912" target="_blank">TrackyServer</a></li>
@@ -90,18 +90,18 @@
   filter: drop-shadow(0 0 2em rgb(0, 0, 0));
 }
 
-.server-link{
+.link{
   margin-left: 20px;
 }
-.server-link > li > a {
+.link > li > a {
   color: yellow; /* Default and visited link color */
   cursor: pointer; /* Show pointer cursor on hover */
 }
-.server-link > li > a:visited {
+.link > li > a:visited {
   color: black; /* Default and visited link color */
 }
 
-.server-link > li > a:hover{
+.link > li > a:hover{
   color:white;
   transition: 200ms;
 }

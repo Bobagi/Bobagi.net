@@ -48,3 +48,17 @@
 label{
   color:whitesmoke;
 }
+
+label > a {
+  color: yellow; /* Default and visited link color */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+label > a:visited {
+  color: black; /* Default and visited link color */
+}
+
+label > a:hover{
+  color:white;
+  transition: 200ms;
+}
