@@ -2,8 +2,6 @@
 import vue from "@vitejs/plugin-vue";
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 import ViteFonts from "unplugin-fonts/vite";
-
-// Utilities
 import dotenv from "dotenv";
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
@@ -17,7 +15,6 @@ export default defineConfig({
     vue({
       template: { transformAssetUrls },
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
       autoImport: true,
       styles: {
@@ -34,7 +31,7 @@ export default defineConfig({
         ],
       },
     }),
-    pluginRewriteAll(), // Add this line to include vite-plugin-rewrite-all
+    pluginRewriteAll(),
   ],
   resolve: {
     alias: {

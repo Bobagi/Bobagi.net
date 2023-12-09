@@ -17,7 +17,7 @@
 
           <div style="display: flex; gap: 35px;">
             <img
-              src="/Browser_Orion_Romantic_Skin.png"
+              src="/Browser_Orion.png"
               class="logo"
               style="height: 20em;"
               alt="Orion sprite"
