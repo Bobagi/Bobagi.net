@@ -26,7 +26,7 @@ const routes = [
         component: () => import("@/views/VuetifyDocs.vue"),
       },
       {
-        path: "/Snowflake",
+        path: "Snowflake",
         name: "Snowflake",
         component: () => import("@/views/vwSnowflake.vue"),
       },

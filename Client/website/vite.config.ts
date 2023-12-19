@@ -5,7 +5,6 @@ import ViteFonts from "unplugin-fonts/vite";
 import dotenv from "dotenv";
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
-import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
 dotenv.config();
 
@@ -32,7 +31,6 @@ export default defineConfig({
         ],
       },
     }),
-    pluginRewriteAll(),
   ],
   resolve: {
     alias: {
