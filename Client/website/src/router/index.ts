@@ -16,27 +16,27 @@ const routes = [
           import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
       },
       {
-        path: "/Register",
+        path: "/",
         name: "Register",
         component: () => import("@/views/vwRegister.vue"),
       },
       {
-        path: "/Vuetify",
+        path: "/",
         name: "VuetifyDocs",
         component: () => import("@/views/VuetifyDocs.vue"),
       },
       {
-        path: "Snowflake",
+        path: "/",
         name: "Snowflake",
         component: () => import("@/views/vwSnowflake.vue"),
       },
       {
-        path: "/Herowars",
+        path: "/",
         name: "Herowars",
         component: () => import("@/views/vwHeroWars.vue"),
       },
       {
-        path: "/Zomboid",
+        path: "/",
         name: "Zomboid",
         component: () => import("@/views/vwZomboid.vue"),
       },
