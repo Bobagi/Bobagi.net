@@ -2,7 +2,7 @@
   <v-app-bar flat color="black" height="50">
     <v-col class="d-flex align-center">
       <!-- Wrap the content with router-link -->
-      <a href="https://bobagi.net" class="d-flex align-center" style="text-decoration: none; color: inherit;">
+      <a :href="getBaseUrl()" class="d-flex align-center" style="text-decoration: none; color: inherit;">
         <img
           src="/BeeposTransp2.png"
           class="logo"
@@ -17,3 +17,20 @@
     </v-col>
   </v-app-bar>
 </template>
+
+<script>
+export default {
+  methods: {
+    getBaseUrl() {
+      // Check if the environment is development
+      if (process.env.NODE_ENV === 'development') {
+        // Return the localhost URL
+        return 'http://localhost:3000';
+      } else {
+        // Return the production URL
+        return 'https://bobagi.net';
+      }
+    }
+  }
+};
+</script>
