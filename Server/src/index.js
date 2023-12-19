@@ -4,6 +4,7 @@ const fs = require("fs");
 const cors = require("cors");
 const path = require("path");
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
 
 // Specify the path to your .env file
 dotenv.config({ path: path.join(__dirname, "../.env") });
@@ -13,6 +14,7 @@ const PORT = 4000;
 
 // Configurar o middleware CORS
 app.use(cors());
+app.use(bodyParser.json());
 
 // Configurar o proxy para lidar com solicitações da API
 app.set("trust proxy", true);
@@ -20,10 +22,12 @@ app.set("trust proxy", true);
 // Import your route files
 const defaultRoutes = require("../routes/defaultRoutes");
 const downloadRoutes = require("../routes/download");
+const auth = require("../routes/auth");
 
 // Use the routes in your app
 app.use("/", defaultRoutes);
 app.use("/download", downloadRoutes);
+app.use("/auth", auth);
 
 let pathKey, pathCert;
 
