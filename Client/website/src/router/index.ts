@@ -40,6 +40,10 @@ const routes = [
         name: "Zomboid",
         component: () => import("@/views/vwZomboid.vue"),
       },
+      {
+        path: '/:catchAll(.*)',
+        component: () => import("@/views/vwPageNotFound.vue"),
+      },
     ],
   },
 ];

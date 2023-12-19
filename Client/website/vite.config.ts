@@ -5,6 +5,7 @@ import ViteFonts from "unplugin-fonts/vite";
 import dotenv from "dotenv";
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
+import Voie from 'vite-plugin-voie';
 
 dotenv.config();
 
