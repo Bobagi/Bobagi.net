@@ -3,7 +3,8 @@ todas as chamadas a api começam com /api, que nao precisa ser definida no codig
 toda configuraçaod e proxy for feit no le-ssl.conf
 
 website .env:
-VITE_API_BASE_URL=https://localhost:4000
+VITE_API_BASE_URL="https://localhost:4000" or "https://bobagi.net/api"
+NODE_ENV="production" or "development"
 
 node server .env:
 POSTGRES_URL="postgres://<USERNAME>:<PASSWORD>@<HOST>:5432/<DATABASE>"
@@ -14,5 +15,7 @@ POSTGRES_PORT="5432"
 POSTGRES_HOST="<HOST>"
 POSTGRES_PASSWORD="<PASSWORD>"
 POSTGRES_DATABASE="<DATABASE>"
+NODE_ENV="production" or "development"
+JWT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 proxy no servidor para usar /api/ na URL para acessar a API

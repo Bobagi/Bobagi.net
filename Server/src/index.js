@@ -14,6 +14,8 @@ const PORT = 4000;
 
 // Configurar o middleware CORS
 app.use(cors());
+
+// Middleware to parse JSON request bodies
 app.use(bodyParser.json());
 
 // Configurar o proxy para lidar com solicitações da API
@@ -32,7 +34,7 @@ app.use("/auth", auth);
 let pathKey, pathCert;
 
 // Configurar servidor HTTPS
-if (process.env.NODE_ENV != "development") {
+if (process.env.NODE_ENV === "production") {
   pathKey = "/etc/letsencrypt/live/bobagi.net/privkey.pem";
   pathCert = "/etc/letsencrypt/live/bobagi.net/fullchain.pem";
 } else {

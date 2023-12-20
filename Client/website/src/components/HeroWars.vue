@@ -80,6 +80,7 @@
 
 <script lang="ts" setup>
 const downloadFile = () => {
+  console.log(import.meta.env.VITE_API_BASE_URL);
   const fileName = "dist.7z";
   // Update the download URL to include the API path
   const downloadUrl =

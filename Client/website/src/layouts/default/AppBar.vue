@@ -7,7 +7,7 @@
           src="/BeeposTransp2.png"
           class="logo"
           style="height: 40px; width: 40px"
-          alt="Bobagi logo"
+          alt="Bobagi logo, a yellow and black color pallete bee with tentacles, small in the top left corner of screen"
         />
         <v-app-bar-title class="ml-2 logo">
           <!-- Wrap the text with a regular anchor tag -->
@@ -23,7 +23,7 @@ export default {
   methods: {
     getBaseUrl() {
       // Check if the environment is development
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV == "development") {
         // Return the localhost URL
         return 'http://localhost:3000';
       } else {

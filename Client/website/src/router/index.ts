@@ -22,6 +22,11 @@ const routes = [
       },
       {
         path: "/",
+        name: "Login",
+        component: () => import("@/views/vwLogin.vue"),
+      },
+      {
+        path: "/",
         name: "VuetifyDocs",
         component: () => import("@/views/VuetifyDocs.vue"),
       },
