@@ -6,7 +6,13 @@ website .env:
 VITE_API_BASE_URL=https://localhost:4000
 
 node server .env:
-DATABASE_CONNECTION="postgres://default:xxxxxxxxx-xxxxx-xxxxxx-xxxxxxxx.xx-xxxxxx-x.postgres.vercel-storage.com:xxxxxxx/verceldb"
-JWT_SECRET="xxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxx"
-PORT="4000"
-NODE_ENV="dev"
+POSTGRES_URL="postgres://<USERNAME>:<PASSWORD>@<HOST>:5432/<DATABASE>"
+POSTGRES_PRISMA_URL="postgres://<USERNAME>:<PASSWORD>@<HOST>:5432/<DATABASE>?pgbouncer=true&connect_timeout=15"
+POSTGRES_URL_NON_POOLING="postgres://<USERNAME>:<PASSWORD>@<HOST>.us-east-1.postgres.vercel-storage.com:5432/<DATABASE>"
+POSTGRES_USER="<USERNAME>"
+POSTGRES_PORT="5432"
+POSTGRES_HOST="<HOST>"
+POSTGRES_PASSWORD="<PASSWORD>"
+POSTGRES_DATABASE="<DATABASE>"
+
+proxy no servidor para usar /api/ na URL para acessar a API

@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const pool = require("../src/db");
+const pool = require("../src/db.js");
 
 // Test database connection endpoint
 router.get("/test", async (req, res) => {
@@ -11,11 +11,11 @@ router.get("/test", async (req, res) => {
       const result = await pool.query("SELECT 'Database connection test' AS test");
       res.status(200).json(result.rows[0]);
     } catch (error) {
-      console.error("Error during database connection test:", error);
+      console.warn("Error during database connection test:", error);
       res.status(500).send("Internal Server Error");
     }
   });
-  
+
 // Register endpoint
 router.post("/register", async (req, res) => {
   try {

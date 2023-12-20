@@ -32,7 +32,7 @@ app.use("/auth", auth);
 let pathKey, pathCert;
 
 // Configurar servidor HTTPS
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV != "development") {
   pathKey = "/etc/letsencrypt/live/bobagi.net/privkey.pem";
   pathCert = "/etc/letsencrypt/live/bobagi.net/fullchain.pem";
 } else {
